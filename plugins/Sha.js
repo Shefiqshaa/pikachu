@@ -12,7 +12,7 @@ const need = "താനാരാണെന്ന് തനിക്ക് അറ�
 
 if (Config.WORKTYPE == 'private') {
 
-  Asena.addCommand({ pattern: 'who am i ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+  Asena.addCommand({ pattern: 'Sha ?(*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(need);
 
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-  Asena.addCommand({ pattern: 'who am i ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+  Asena.addCommand({ pattern: 'Sha?(*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(need);
 
