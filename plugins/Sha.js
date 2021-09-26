@@ -8,11 +8,11 @@ const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys'
 const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
-const need = "Command Kazhinn Yanthankilum Eyuth muthe\n🙄🙄🙄"
+const need = "താനാരാണെന്ന് തനിക്ക് അറിയാന്‍ മേലങ്കില്‍താന്‍ എന്നോട്‌ ചോദിക്ക്.. താനാരണെന്ന്...തനിക്ക് ഞാന്‍ പറഞ്ഞു തരാംതാനാരാണെന്ന്...എന്നിട്ട്‌ഞാനാരാണെന്ന് എനിക്കാറിയാമൊന്നുതാനെന്നോട്‌ ചോദിക്ക്..അപ്പോ തനിക്ക് ഞാന്‍ പറഞ്ഞു തരാംതാനാരാണെന്നും\n🙈"
 
 if (Config.WORKTYPE == 'private') {
 
-  Asena.addCommand({ pattern: 'sha ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+  Asena.addCommand({ pattern: 'who am i ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(need);
 
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-  Asena.addCommand({ pattern: 'sha ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+  Asena.addCommand({ pattern: 'who am i ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage(need);
 
